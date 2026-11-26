@@ -2,7 +2,7 @@
 
 App web para registrar gastos e ingresos, ver el resumen del mes, controlar compras en cuotas y recibir un aviso antes de pasarse del presupuesto.
 
-Trabajo Práctico Final — Bootcamp Generación T · Nazir Molina
+Trabajo Práctico Final 
 
 ![Pantalla principal](docs/capturas/2_principal.png)
 
