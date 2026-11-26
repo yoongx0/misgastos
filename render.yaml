@@ -1,0 +1,24 @@
+# Backend en Render. La base de datos está en Neon (PostgreSQL): su cadena de conexión
+# se carga a mano en DATABASE_URL desde el panel de Render (nunca en el repositorio).
+services:
+  - type: web
+    name: misgastos-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL        # cadena de conexión de Neon (con ?sslmode=require)
+        sync: false
+      - key: CORS_ORIGIN         # https://misgastos.netlify.app
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: USUARIO_EMAIL
+        sync: false
+      - key: USUARIO_PASSWORD
+        sync: false
+      - key: TZ
+        value: America/Argentina/Buenos_Aires

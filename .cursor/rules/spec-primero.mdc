@@ -1,0 +1,12 @@
+---
+description: Reglas de trabajo para cualquier cambio en MisGastos
+alwaysApply: true
+---
+
+- Antes de escribir código, leé `docs/spec.md` y `AGENTS.md`.
+- Si la tarea toca una regla de negocio que no está en la spec, no la inventes: frená y proponé una pregunta para `docs/preguntas-abiertas.md`.
+- Para tareas de más de un archivo, primero mostrá un plan corto y esperá aprobación.
+- Escribí primero el test que falla (rojo) y después el código que lo pone en verde.
+- Montos en centavos enteros. Fechas como texto `AAAA-MM-DD`. "Hoy" siempre desde el `Reloj`.
+- Consultas SQL siempre con parámetros (`$1`, `$2`…), nunca concatenando texto.
+- Referenciá la RN o HU en el mensaje de commit.

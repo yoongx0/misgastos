@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Variables: cargar VITE_API_URL en el panel de Netlify (dirección del backend en Render).
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
